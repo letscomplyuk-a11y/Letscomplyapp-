@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsComply - Holiday Let Compliance Made Simple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1f3a 0%, #0f1419 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(15, 20, 25, 0.95);
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4caf50;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .hero {
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #b0b0b0;
+            margin-bottom: 40px;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .benefit {
+            background: rgba(76, 175, 80, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4caf50;
+        }
+
+        .benefit-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .benefit h3 {
+            color: #4caf50;
+            margin-bottom: 8px;
+        }
+
+        .benefit p {
+            font-size: 14px;
+            color: #a0a0a0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #4caf50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #4caf50;
+            border: 2px solid #4caf50;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(76, 175, 80, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 50px 0;
+            text-align: left;
+        }
+
+        .feature-card {
+            background: rgba(76, 175, 80, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+
+        .feature-card h3 {
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #a0a0a0;
+            font-size: 14px;
+        }
+
+        footer {
+            background: rgba(15, 20, 25, 0.95);
+            padding: 20px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(76, 175, 80, 0.2);
+            color: #707070;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">LetsComply</a>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="/app">Dashboard</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Holiday Let Compliance Made Simple</h1>
+            <p class="subtitle">Stop worrying about certificates, deadlines, and regulations. LetsComply automates compliance tracking for your holiday properties.</p>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">⏱️</div>
+                    <h3>Save 5+ Hours</h3>
+                    <p>Monthly on compliance tasks</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">✓</div>
+                    <h3>99.8% Compliance</h3>
+                    <p>Never miss a deadline</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">💰</div>
+                    <h3>£1,500+ Savings</h3>
+                    <p>Annual cost reduction</p>
+                </div>
+            </div>
+
+            <div id="features" class="features-grid">
+                <div class="feature-card">
+                    <h3>🎖️ Certificate Tracking</h3>
+                    <p>Automatically track gas safety, fire risk, and electrical certificates with expiry alerts.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🚨 Smart Alerts</h3>
+                    <p>Get notified before certificates expire so you never miss a compliance deadline.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌍 Multi-Jurisdiction</h3>
+                    <p>Manage properties across different regions with jurisdiction-specific compliance rules.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Compliance Score</h3>
+                    <p>Real-time compliance scoring for each property with actionable recommendations.</p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="/app" class="btn btn-primary">Go to Dashboard</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+
+            <div id="pricing" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(76, 175, 80, 0.2);">
+                <h2 style="margin-bottom: 30px; color: #ffffff;">Simple, Transparent Pricing</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>1-10 Properties</h3>
+                        <p style="font-size: 24px; color: #4caf50; margin: 15px 0;">£9.99/mo</p>
+                        <p>Perfect for individual hosts</p>
+                        <ul style="margin-top: 15px; text-align: left; list-style: none;">
+                            <li>✓ Up to 10 Properties</li>
+                            <li>✓ Certificate Tracking</li>
+                            <li>✓ Email Alerts</li>
+                            <li>✓ Document Vault</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>11-25 Properties</h3>
+                        <p style="font-size: 24px; color: #4caf50; margin: 15px 0;">£19.99/mo</p>
+                        <p>For growing property managers</p>
+                        <ul style="margin-top: 15px; text-align: left; list-style: none;">
+                            <li>✓ 11-25 Properties</li>
+                            <li>✓ Multi-Jurisdiction Support</li>
+                            <li>✓ Advanced Reports</li>
+                            <li>✓ Priority Support</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>25+ Properties</h3>
+                        <p style="font-size: 24px; color: #4caf50; margin: 15px 0;">£49.99/mo</p>
+                        <p>For large management companies</p>
+                        <ul style="margin-top: 15px; text-align: left; list-style: none;">
+                            <li>✓ 26+ Properties (Unlimited)</li>
+                            <li>✓ All 11-25 Features</li>
+                            <li>✓ Team Management</li>
+                            <li>✓ Dedicated Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 LetsComply. All rights reserved. | <a href="#" style="color: #4caf50; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #4caf50; text-decoration: none;">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

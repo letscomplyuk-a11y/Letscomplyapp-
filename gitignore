@@ -1,0 +1,15 @@
+node_modules/
+*.log
+logs/
+uploads/
+.DS_Store
+*.pid
+*.seed
+*.pid.lock
+dist/
+build/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
